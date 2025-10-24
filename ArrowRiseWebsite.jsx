@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, Mail, Instagram, Heart, Target, Users, Award } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X, Mail, Instagram, Heart, Target, Users, Award } from "lucide-react";
 
 export default function ArrowRiseWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function ArrowRiseWebsite() {
                 <p className="text-sm text-amber-600 font-medium">Archery Initiative</p>
               </div>
             </div>
-            
+
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-green-900 hover:text-amber-600 transition">About</a>
               <a href="#mission" className="text-green-900 hover:text-amber-600 transition">Mission</a>
@@ -28,7 +28,12 @@ export default function ArrowRiseWebsite() {
               <a href="#donate" className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition">Donate</a>
             </div>
 
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-green-900">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-green-900"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
+            >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
@@ -140,7 +145,10 @@ export default function ArrowRiseWebsite() {
             <p className="text-lg text-gray-700 mb-6">
               We're currently setting up our donation platform. In the meantime, please contact us to learn about ways to support our mission.
             </p>
-            <a href="mailto:arrowrisearcheryinitiative@gmail.com" className="inline-block bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition">
+            <a
+              href="mailto:arrowrisearcheryinitiative@gmail.com"
+              className="inline-block bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition"
+            >
               Contact Us About Donating
             </a>
           </div>
@@ -155,7 +163,19 @@ export default function ArrowRiseWebsite() {
             Interested in joining our archery program? Fill out our registration form to get started!
           </p>
           <div className="bg-white p-12 rounded-2xl shadow-xl">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 mx-auto mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-amber-600 mx-auto mb-6"
+              aria-hidden="true"
+            >
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
               <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -166,9 +186,9 @@ export default function ArrowRiseWebsite() {
             <p className="text-gray-700 mb-8">
               Complete our quick registration form to join ArrowRise's archery programs. We'll collect basic student and parent/guardian information.
             </p>
-            <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdMVzXmJmI551ysxPBKVX3qjUVUX74SLDf8uGgO-_chydf7KA/viewform" 
-              target="_blank" 
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdMVzXmJmI551ysxPBKVX3qjUVUX74SLDf8uGgO-_chydf7KA/viewform"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition shadow-lg"
             >
@@ -186,11 +206,19 @@ export default function ArrowRiseWebsite() {
             <div className="bg-gradient-to-br from-green-50 to-amber-50 p-8 rounded-2xl shadow-lg">
               <h4 className="text-2xl font-bold text-green-900 mb-6">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:arrowrisearcheryinitiative@gmail.com" className="flex items-center space-x-3 text-gray-700 hover:text-amber-600 transition">
+                <a
+                  href="mailto:arrowrisearcheryinitiative@gmail.com"
+                  className="flex items-center space-x-3 text-gray-700 hover:text-amber-600 transition"
+                >
                   <Mail size={24} className="text-amber-600" />
                   <span className="break-all">arrowrisearcheryinitiative@gmail.com</span>
                 </a>
-                <a href="https://www.instagram.com/arrowrisearcheryinitiative/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-gray-700 hover:text-amber-600 transition">
+                <a
+                  href="https://www.instagram.com/arrowrisearcheryinitiative/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-gray-700 hover:text-amber-600 transition"
+                >
                   <Instagram size={24} className="text-amber-600" />
                   <span>@arrowrisearcheryinitiative</span>
                 </a>
@@ -218,14 +246,20 @@ export default function ArrowRiseWebsite() {
             A youth-organized nonprofit serving New Jersey communities
           </p>
           <div className="mt-6 flex justify-center space-x-6">
-            <a href="mailto:arrowrisearcheryinitiative@gmail.com" className="hover:text-amber-400 transition">
+            <a href="mailto:arrowrisearcheryinitiative@gmail.com" className="hover:text-amber-400 transition" aria-label="Email">
               <Mail size={24} />
             </a>
-            <a href="https://www.instagram.com/arrowrisearcheryinitiative/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">
+            <a
+              href="https://www.instagram.com/arrowrisearcheryinitiative/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-400 transition"
+              aria-label="Instagram"
+            >
               <Instagram size={24} />
             </a>
           </div>
-          <p className="text-green-400 text-sm mt-6">© 2025 ArrowRise Archery Initiative. All rights reserved.</p>
+          <p className="text-green-400 text-sm mt-6">© {new Date().getFullYear()} ArrowRise Archery Initiative. All rights reserved.</p>
         </div>
       </footer>
     </div>
